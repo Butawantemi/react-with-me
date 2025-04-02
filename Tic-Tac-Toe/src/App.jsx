@@ -1,18 +1,26 @@
-import './App.css'
+import "./App.css";
 
+const products = [
+  { title: "Cabbage", isFruit: false, id: 1 },
+  { title: "Garlic", isFruit: false, id: 2 },
+  { title: "Apple", isFruit: true, id: 3 },
+];
 
-function MyButton () {
+export default function MyApp() {
+  const listItems = products.map((product) => (
+    <li
+      key={product.id}
+      style={{
+        color: product.isFruit ? "magenta" : "darkgreen",
+      }}
+    >
+      {product.title}
+    </li>
+  ));
+
   return (
-    <button>Hi there!</button>
-  );
-};
-
-
-export default function MyApp () {
-  return (
-    <>
-    <h1>Welcome to react!</h1>
-    <MyButton />
-    </>
+    <div className="container">
+      <ul>{listItems}</ul>
+    </div>
   );
 }
