@@ -55,18 +55,19 @@ function Board({ xIsNext, squares, onPlay}) {
 
 
 export default function Game() {
-  const [ xIsNext, setXIsNext ] = useState(true);
-  const [history, setHistory ] = useState(Array(9).fill(null));
-  const currentSquares = history[history.length -1];
+  const [history, setHistory] = useState([Array(9).fill(null)]);
+  const [currentMove, setCurrentMove] = useState(0);
+  const xIsNext = currentMove % 2 === 0;
+  const currentSquares = history[currentMove];
 
   const handlePlay = (nextSquares) => {
-    setHistory([...history, nextSquares]);
-    setXIsNext(!xIsNext)
-
+    const nextHistory = [...history.slice(0, currentMove + 1), nextSquares];
+    setHistory(nextHistory);
+    setCurrentMove(nextHistory.length - 1);
   }
 
-  const jumpTo = (moves) => {
-
+  const jumpTo = (nextMove) => {
+    setCurrentMove(nextMove);
   }
 
   const moves = history.map((squares, move) => {
@@ -89,7 +90,7 @@ export default function Game() {
         <Board xIsNext={xIsNext} squares={currentSquares} onPlay={handlePlay} />
       </div>
       <div className="game-info">
-        <ol>{/*TODO*/}</ol>
+        <ol>{moves}</ol>
       </div>
     </div>
   );
@@ -104,7 +105,7 @@ const calculateWinner = (squares) => {
     [1, 4, 7],
     [2, 5, 8],
     [0, 4, 8],
-    [2, 4, 6]
+    [2, 4, 6],
   ];
   for (let i = 0; i < lines.length; i++) {
     const [a, b, c] = lines[i];
