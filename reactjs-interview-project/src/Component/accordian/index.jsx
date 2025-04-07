@@ -19,7 +19,7 @@ export default function Accordian() {
     const findIndexOfCurrectId = copyMultiple.indexOf(getCurrentId)
 
     if (findIndexOfCurrectId === -1) copyMultiple.push(getCurrentId)
-        else copyMultiple.slice(findIndexOfCurrectId, 1)
+        else copyMultiple.splice(findIndexOfCurrectId, 1)
 
     setMultiple(copyMultiple)
   };
@@ -32,11 +32,11 @@ export default function Accordian() {
       <div className="accordin">
         {data && data.length > 0 ? (
           data.map((dataItem) => (
-            <div className="item">
+            <div className="item" key={dataItem.id}>
               <div
                 onClick={
                   enableMultiSelection
-                    ? handleMultipleSelection(dataItem.id)
+                    ? () => handleMultipleSelection(dataItem.id)
                     : () => handleSingleSelection(dataItem.id)
                 }
                 className="title"
