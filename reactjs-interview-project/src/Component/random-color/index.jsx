@@ -27,7 +27,7 @@ export default function RandomColor() {
   };
 
   useEffect(() => {
-    if (typeOfColor === "rgb") handleCreateRandomRgaColor 
+    if (typeOfColor === "rgb") handleCreateRandomRgaColor
     else handleCreateRandomHexColor
   }, [typeOfColor])
 
