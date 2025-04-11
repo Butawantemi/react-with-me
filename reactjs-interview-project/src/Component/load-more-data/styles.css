@@ -1,0 +1,30 @@
+.load-more-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin: auto 8rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.products-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+.product {
+    padding: 20px;
+    border: 1px solid;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 1rem;
+}
+
+.product p {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
