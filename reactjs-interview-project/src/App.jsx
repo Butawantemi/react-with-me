@@ -3,6 +3,8 @@ import ImageSlider from "./Component/image-slider";
 import LoadMoreData from "./Component/load-more-data";
 import RandomColor from "./Component/random-color";
 import StarRating from "./Component/star-rating";
+import TreeView from "./Component/tree-view";
+import menus from "./Component/tree-view/data";
 
 export default function App() {
   return (
@@ -23,8 +25,11 @@ export default function App() {
         limit={"10"}
       /> */}
 
-      {/* Loading more data */}
-      <LoadMoreData />
+      {/* Loading more data component */}
+      {/* <LoadMoreData /> */}
+
+      {/* Tree view component */}
+      <TreeView menus={menus}/>
     </div>
   );
 }
