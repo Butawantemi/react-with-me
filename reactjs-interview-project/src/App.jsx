@@ -1,6 +1,7 @@
 import Accordian from "./Component/accordian";
 import ImageSlider from "./Component/image-slider";
 import LoadMoreData from "./Component/load-more-data";
+import QRCodeGenerator from "./Component/qr-code-generator";
 import RandomColor from "./Component/random-color";
 import StarRating from "./Component/star-rating";
 import TreeView from "./Component/tree-view";
@@ -29,7 +30,10 @@ export default function App() {
       {/* <LoadMoreData /> */}
 
       {/* Tree view component */}
-      <TreeView menus={menus}/>
+      {/* <TreeView menus={menus}/> */}
+
+      {/* QR code generator component */}
+      <QRCodeGenerator />
     </div>
   );
 }
