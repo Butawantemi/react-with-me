@@ -1,8 +1,10 @@
 import Accordian from "./Component/accordian";
 import ImageSlider from "./Component/image-slider";
+import LightDark from "./Component/light-dark-mode";
 import LoadMoreData from "./Component/load-more-data";
 import QRCodeGenerator from "./Component/qr-code-generator";
 import RandomColor from "./Component/random-color";
+import ScrollIndicator from "./Component/scroll-indicator";
 import StarRating from "./Component/star-rating";
 import TreeView from "./Component/tree-view";
 import menus from "./Component/tree-view/data";
@@ -33,7 +35,13 @@ export default function App() {
       {/* <TreeView menus={menus}/> */}
 
       {/* QR code generator component */}
-      <QRCodeGenerator />
+      {/* <QRCodeGenerator /> */}
+
+      {/* light and dark mode theme switch */}
+      {/* <LightDark /> */}
+
+      {/* Scroll Indicator component */}
+      <ScrollIndicator url={'https://dummyjson.com/products?limit=100'}/>
     </div>
   );
 }
