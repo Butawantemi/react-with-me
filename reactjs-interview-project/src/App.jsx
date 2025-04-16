@@ -1,4 +1,5 @@
 import Accordian from "./Component/accordian";
+import ModalTest from "./Component/custom-modal-popup/modal-test";
 import TabsTest from "./Component/custom-tabs/tab-test";
 import ImageSlider from "./Component/image-slider";
 import LightDark from "./Component/light-dark-mode";
@@ -45,7 +46,10 @@ export default function App() {
       {/* <ScrollIndicator url={'https://dummyjson.com/products?limit=100'}/> */}
 
       {/* Custom tabs component */}
-      <TabsTest />
+      {/* <TabsTest /> */}
+
+      {/* Custom Modal component */}
+      <ModalTest />
     </div>
   );
 }

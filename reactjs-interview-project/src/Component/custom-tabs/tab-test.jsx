@@ -22,7 +22,7 @@ export default function TabsTest() {
   ];
 
   const handleChange = (currentTabIndex) => {
-    console.log(currentTabIndex);
+    //console.log(currentTabIndex);
   };
 
   return <Tabs tabsContent={tabs} onChange={handleChange} />;
