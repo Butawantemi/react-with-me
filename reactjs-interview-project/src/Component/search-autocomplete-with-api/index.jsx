@@ -70,7 +70,7 @@ export default function SearchAutocomplete() {
         />
       )}
       {showDropDown ? (
-        <Suggestions onClick={handleClick} data={filteredUsers} />
+        <Suggestions handleClick={handleClick} data={filteredUsers} />
       ) : null}
     </div>
   );
