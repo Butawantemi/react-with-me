@@ -8,6 +8,7 @@ import LoadMoreData from "./Component/load-more-data";
 import QRCodeGenerator from "./Component/qr-code-generator";
 import RandomColor from "./Component/random-color";
 import ScrollIndicator from "./Component/scroll-indicator";
+import SearchAutocomplete from "./Component/search-autocomplete-with-api";
 import StarRating from "./Component/star-rating";
 import TreeView from "./Component/tree-view";
 import menus from "./Component/tree-view/data";
@@ -53,7 +54,10 @@ export default function App() {
       {/* <ModalTest /> */}
 
       {/* Github profile finder */}
-      <GithubProfileFinder />
+      {/* <GithubProfileFinder /> */}
+
+      {/* Search Autocomplete component */}
+      <SearchAutocomplete />
     </div>
   );
 }
