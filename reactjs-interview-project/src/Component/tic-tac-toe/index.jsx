@@ -26,7 +26,7 @@ const TicTacToe = () => {
       [2, 4, 6],
     ];
 
-    for (let i = 0; winningPattern > i; i++) {
+    for (let i = 0; winningPattern.length > i; i++) {
       const [x, y, z] = winningPattern[i];
 
       if (
