@@ -8,8 +8,9 @@ const dammyApiResponse = {
 
 const featureFlagsDataServicesCall = () => {
   return new Promise((resolve, reject) => {
-    if (dammyApiResponse) setTimeout(resolve(dammyApiResponse), 500);
-    else reject("Some error occured! Please try again");
+    if (dammyApiResponse) {
+        setTimeout(() => resolve(dammyApiResponse), 500);
+      }else reject("Some error occured! Please try again");
   });
 };
 

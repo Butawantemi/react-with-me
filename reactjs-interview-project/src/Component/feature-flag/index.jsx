@@ -5,6 +5,7 @@ import RandomColor from "../random-color";
 import TicTacToe from "../tic-tac-toe";
 import TreeView from "../tree-view";
 import { FeatureFlagsContext } from "./context";
+import menus from "../tree-view/data";
 
 const FeatureFlags = () => {
   const { loading, enabledFlags } = useContext(FeatureFlagsContext);
@@ -28,7 +29,7 @@ const FeatureFlags = () => {
     },
     {
       key: "showTreeView",
-      component: <TreeView menus={menus} />,
+      component: <TreeView menus={menus}/>,
     },
   ];
 
