@@ -1,6 +1,8 @@
 import Accordian from "./Component/accordian";
 import ModalTest from "./Component/custom-modal-popup/modal-test";
 import TabsTest from "./Component/custom-tabs/tab-test";
+import FeatureFlags from "./Component/feature-flag";
+import FeatureFlagGlobalState from "./Component/feature-flag/context";
 import GithubProfileFinder from "./Component/github-profile-finder";
 import ImageSlider from "./Component/image-slider";
 import LightDark from "./Component/light-dark-mode";
@@ -61,7 +63,12 @@ export default function App() {
       {/* <SearchAutocomplete /> */}
 
       {/* Tic-tac-toe */}
-      <TicTacToe />
+      {/* <TicTacToe /> */}
+
+      {/* Feature Flags Implementation */}
+      <FeatureFlagGlobalState>
+        <FeatureFlags />
+      </FeatureFlagGlobalState>
     </div>
   );
 }
