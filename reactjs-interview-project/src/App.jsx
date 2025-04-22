@@ -10,6 +10,7 @@ import LoadMoreData from "./Component/load-more-data";
 import QRCodeGenerator from "./Component/qr-code-generator";
 import RandomColor from "./Component/random-color";
 import ScrollIndicator from "./Component/scroll-indicator";
+import ScrollToTopAndBottom from "./Component/scroll-to-top-and-bottom";
 import SearchAutocomplete from "./Component/search-autocomplete-with-api";
 import StarRating from "./Component/star-rating";
 import TicTacToe from "./Component/tic-tac-toe";
@@ -72,7 +73,10 @@ export default function App() {
       </FeatureFlagGlobalState> */}
 
       {/* useFetch - Custom Hook */}
-      <UseFetchHookTestText />
+      {/* <UseFetchHookTestText /> */}
+
+      {/* Scroll To Top And Bottom */}
+      <ScrollToTopAndBottom />
 
     </div>
   );
