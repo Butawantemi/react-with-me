@@ -17,6 +17,7 @@ import TicTacToe from "./Component/tic-tac-toe";
 import TreeView from "./Component/tree-view";
 import menus from "./Component/tree-view/data";
 import UseFetchHookTestText from "./Component/use-fetch/test";
+import UseOnclickOutsideTest from "./Component/use-outside-click/test";
 import UseWindowResizeTest from "./Component/use-window-resize/test";
 
 export default function App() {
@@ -76,8 +77,11 @@ export default function App() {
       {/* useFetch - Custom Hook */}
       {/* <UseFetchHookTestText /> */}
 
+      {/* Use Outside click hook */}
+      <UseOnclickOutsideTest />
+
       {/* Use window resize hook */}
-      <UseWindowResizeTest />
+      {/* <UseWindowResizeTest /> */}
 
       {/* Scroll To Top And Bottom */}
       {/* <ScrollToTopAndBottom /> */}
