@@ -1,7 +1,7 @@
 import useWindowResize from ".";
 
 const UseWindowResizeTest = () => {
-const windowSize = useWindowResize;
+const windowSize = useWindowResize();
 const {width, height} = windowSize;
 
 console.log(windowSize)
