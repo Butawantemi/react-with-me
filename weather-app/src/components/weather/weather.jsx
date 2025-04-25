@@ -63,7 +63,9 @@ const Weather = () => {
           <div className="date">
             <span>{getCurrentDate()}</span>
           </div>
-          <div className="temp">{weatherData?.main?.temp}</div>
+          <div className="temp">{`${Math.floor(
+            weatherData?.main?.temp - 273.15
+          )}°C`}</div>
           <p className="description">
             {weatherData && weatherData.weather && weatherData.weather[0]
               ? weatherData.weather[0].description
