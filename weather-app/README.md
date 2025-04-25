@@ -25,7 +25,7 @@ This is a clean **Weather App** built with **React JS** And **Vite** which fetch
 
 ## 📸 Screenshots
 
-<img src="./src/assets/globe.png">
+<img src="./src/assets/weather.png">
 
 ---
 
