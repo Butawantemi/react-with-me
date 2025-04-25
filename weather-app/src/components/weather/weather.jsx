@@ -40,7 +40,7 @@ const Weather = () => {
   };
 
   useEffect(() => {
-    handleSummit("Dodoma");
+    fetchApi("Dodoma");
   }, []);
 
   return (
