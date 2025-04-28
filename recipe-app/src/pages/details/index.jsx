@@ -12,7 +12,7 @@ const Details = () => {
   } = useContext(GlobalContext);
 
   useEffect(() => {
-    async function getRecipeDetails() {
+    const getRecipeDetails = async () => {
       const response = await fetch(
         `https://forkify-api.herokuapp.com/api/v2/recipes/${id}`
       );
@@ -25,7 +25,7 @@ const Details = () => {
     }
 
     getRecipeDetails();
-  }, []);
+  }, [id, setRecipeDetailsData]);
 
   console.log(recipeDetailsData, "recipeDetailsData");
 
