@@ -1,29 +1,33 @@
 import { Button, Flex, Heading } from "@chakra-ui/react";
 import ExpenseView from "../expense-view";
 import Summary from "../summary";
+import { useState } from "react";
 
 const Main = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const openDrawer = () => setIsOpen(true);
+  const closeDrawer = () => setIsOpen(false);
+
   return (
-    <Flex textAlign={"center"} flexDirection={"column"} pr={"5"} pl={"5"}>
-      <Flex alignItems={"center"} justifyContent={"space-between"} mt={"12"}>
-        <Heading
-          color={"blue.400"}
-          display={["none", "block", "block", "block", "block"]}
-        >
+    <Flex textAlign="center" flexDir="column" px={5}>
+      <Flex align="center" justify="space-between" mt={12}>
+        <Heading color="blue.400" display={["none", "block"]}>
           Expense Tracker
         </Heading>
-        <Flex alignItems={"center"}>
-          <Button bg={"blue.300"} color={"black"} ml={"4"}>
-            Add New Transaction
-          </Button>
-        </Flex>
+        <Button bg="blue.300" color="black" ml={4} onClick={openDrawer}>
+          Add New Transaction
+        </Button>
       </Flex>
-      <Summary />
+
+      <Summary isOpen={isOpen} onClose={closeDrawer} />
+
       <Flex
-        w={"full"}
-        alignItems={"flex-start"}
-        justifyContent={"space-evenly"}
-        flexDirection={["column", "column", "column", "row", "row"]}
+        w="full"
+        align="flex-start"
+        justify="space-evenly"
+        flexDir={["column", "row"]}
+        mt={8}
       >
         <ExpenseView />
         <ExpenseView />
